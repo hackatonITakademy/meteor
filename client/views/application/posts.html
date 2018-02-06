@@ -1,0 +1,17 @@
+<template name="posts">
+        <h1>Dashboard</h1>
+        {{#each posts}}
+        <div class='post'>
+            {{#if hide}}
+                <b style="color:red">Ce post est caché ! Veuillez vous connecter !</b>
+            {{else}}
+                {{title}}, par {{{ setAuthor }}}
+                <div id="charts">
+                        <div id="piechart_3d" style=" margin:15px auto; min-height: 200px;"></div>
+                        <div id="chart_div" style="margin:15px auto; min-height: 200px;"></div> 
+                        <div id="calendar_basic" style=" margin:15px auto; min-height: 200px;"></div>
+                </div>
+            {{/if}}
+        </div>
+        {{/each}}
+</template>
